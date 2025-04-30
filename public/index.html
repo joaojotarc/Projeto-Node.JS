@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Músicas</title>
+</head>
+<body>
+    <h1>Cadastro de Músicas</h1>
+
+    <!-- Campo de busca -->
+    <h2><label for="txtBusca">Buscar música:</label></h2>
+    <input type="text" id="txtBusca" oninput="buscarMusicas()" placeholder="Digite o nome da música">
+    
+    <br><br>
+
+    <!-- Formulário de cadastro de músicas -->
+    <form id="musicForm">
+        <label for="nome">Nome da música:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" name="ano" required><br>
+
+        <label for="genero">Gênero:</label>
+        <input type="text" id="genero" name="genero" required><br>
+
+        <label for="cantor">Cantor/Banda:</label>
+        <input type="text" id="cantor" name="cantor" required><br>
+
+        <!-- Botões de Cadastrar e Atualizar -->
+        <button type="submit" id="cadastrarBtn">Cadastrar</button>
+        <button type="button" id="atualizarBtn" style="display: none;">Atualizar</button>
+    </form>
+
+    <h2>Lista de Músicas</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ano</th>
+                <th>Gênero</th>
+                <th>Cantor/Banda</th>
+                <th>Data de Adição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="musicList">
+            <!-- Lista de músicas será inserida aqui -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
